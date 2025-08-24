@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export function Login() {
     return (
@@ -57,7 +57,7 @@ export function Login() {
 
                     <section>
 
-                        <span className="pl-4">Don't have an account? <Link to='signup' className="underline text-blue-500">Sign up</Link></span>
+                        <span className="pl-4">Don't have an account? <Link to='../signup' className="underline text-blue-500">Sign up</Link></span>
 
                     </section>
 
@@ -127,7 +127,7 @@ export function Signup() {
 
                     <section>
 
-                        <span className="pl-4">Already have an account? <Link className="underline text-blue-500">Log in</Link></span>
+                        <span className="pl-4">Already have an account? <Link to='../login' className="underline text-blue-500">Log in</Link></span>
 
                     </section>
 
