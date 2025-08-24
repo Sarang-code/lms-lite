@@ -1,27 +1,31 @@
 import { Routes, Route } from 'react-router-dom'
-import DashboardLayout from './layouts/Dashboard.jsx'
-import HomePage from './pages/Home.jsx'
+
+// Layouts
+import AuthLayout from './layouts/AuthLayout.jsx'
+
+// pages
+import HomePage from './pages/HomePage.jsx'
+
+// Components
 import Navbar from './components/Navbar.jsx'
-import Header from './components/Header.jsx'
-import Sidebar from './components/Sidebar.jsx'
+import { Login, Signup} from './components/Auth.jsx'
 
 function App() {
   return (
     <>
 
-      <HomePage navbar={<Navbar dP="Logo" name="LMSName" />} />
+      <Routes>
 
-      <DashboardLayout
-      mainHeader = {<Header />}
-      navbar = {<Navbar dP="displayPicture" name="userName" />} 
-      sidebar = {<Sidebar />}
-      >
-      
-      </DashboardLayout>
+        {/* Home page */}
+        <Route path='/' element={ <HomePage navbar={<Navbar dP="Logo" name="LMSName" showLogout={false} />} /> } />
 
-      {/* <Routes>
-        <Route path='/' element={ <Home /> } />
-      </Routes> */}
+        {/* Authentication (Login and signup) */}
+        <Route path='/auth' element={ <AuthLayout /> } >
+          <Route path='login' element={ <Login /> } />
+          <Route path='signup' element={ <Signup /> } />
+        </Route>
+
+      </Routes>
 
     </>
   )
