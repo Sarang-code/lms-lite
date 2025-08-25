@@ -5,10 +5,11 @@ import AuthLayout from './layouts/AuthLayout.jsx'
 
 // pages
 import HomePage from './pages/HomePage.jsx'
+import { Login } from './pages/Login.jsx'
+import { Signup } from './pages/Signup.jsx'
 
 // Components
 import Navbar from './components/Navbar.jsx'
-import { Login, Signup} from './components/Auth.jsx'
 
 function App() {
   return (
