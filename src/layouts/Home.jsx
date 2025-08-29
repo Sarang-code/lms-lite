@@ -2,18 +2,30 @@ export default function HomeLayout() {
     return (
         <>
             <div>
+                
+                <section>
 
-                <header>
-                 
-                </header>
+                    <header></header>
 
-                <nav>
+                </section>
 
-                </nav>
+                <section>
 
-                <main>
+                    <nav></nav>
 
-                </main>
+                </section>
+
+                <section>
+
+                    <main></main>
+
+                </section>
+
+                <section>
+
+                    <footer></footer>
+
+                </section>
                 
             </div>
         </>
